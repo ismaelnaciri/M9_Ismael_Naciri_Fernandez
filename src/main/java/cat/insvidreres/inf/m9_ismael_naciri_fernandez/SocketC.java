@@ -68,7 +68,7 @@ public class SocketC {
 
     private static String encryptRSAGiveHex(String message) {
         try {
-            KeyPair keyPair = keyPairGenerator(512);
+            KeyPair keyPair = keyPairGenerator(2048);
             PrivateKey privateKey = keyPair.getPrivate();
 
             byte[] messageEncrypted = encryptWithPrivateKey(message.getBytes(StandardCharsets.UTF_8), privateKey);
